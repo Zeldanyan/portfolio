@@ -1,5 +1,7 @@
+@import '../var';
+
 .Header {
-    background-color: rgb(0, 0, 0);
+    background-color: $black;
     // background: linear-gradient(to left top, black, 60%, white);
     display: flex;
     justify-content: space-between;
@@ -8,15 +10,16 @@
     border-bottom-style: ridge;
     border-bottom-color: white;*/
     position: relative;
-    box-shadow: 0px 0px 20px 2px black;
-    color: white;
+    transition: box-shadow 4s ease-in-out 0.2s; //0.8*
+    box-shadow: 0px 0px 20px 2px $black;
+    color: $white;
     border-radius: 0 0 10% 10%;
 
     .title {
         font-size: 56px;
         margin: 15px 0px 15px 60px;
         // text-shadow: 2px 2px 2px black;
-        text-shadow: 1px 1px 5px white;
+        text-shadow: 1px 1px 5px $white;
     }
 
     .NavBanner {
@@ -44,10 +47,11 @@
         height: 3px;
         width: 80%;
         position: absolute;
-        background-color: white;
+        background-color: $white;
         bottom: -1px;
         margin: 0 10%;
         border-radius: 100%;
+        transition: background-color 3s ease-in-out 0.2s; //0.6*
     }
 }
 
@@ -60,5 +64,13 @@
             text-shadow:
                 3px 3px rgb(255, 0, 0), -3px -3px rgba(132, 0, 255);
         }
+    }
+}
+
+.Header:hover {
+    box-shadow: 0px 0px 20px 2px $white;
+
+    .border {
+        background-color: rgba(255, 255, 255, 0);
     }
 }

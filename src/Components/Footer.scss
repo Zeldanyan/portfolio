@@ -1,0 +1,12 @@
+@import '../var';
+
+.Footer {
+    height: 5vh;
+    width: 100%;
+    background-color: $black;
+    text-align: center;
+    display: flex;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0px 0px 10px 1px $black;
+    justify-content: center;
+}

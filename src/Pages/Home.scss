@@ -1,4 +1,92 @@
+@import '../var';
+
 .Home {
-    background-color: black;
-    height: 100vh;
+    background-color: $black;
+    height: 100%;
+    color: $white;
+
+    main {
+        min-height: calc(95vh - 94px);
+
+        .About {
+            position: relative;
+
+            margin: 50px 0 50px 0;
+            padding: 50px 20px 50px 20px;
+            background-color: $white;
+            background: linear-gradient(135deg, #ECECEC, 50%, #ffc9c9);
+            color: $black;
+            font-weight: 700;
+            width: fit-content;
+            min-width: 66%;
+            border-radius: 0 50% 50% 0;
+
+            h1 {
+                margin: 0;
+                font-size: 32px;
+                margin-left: 100px;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 42px;
+                margin-left: 100px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 20px;
+                margin: 20px 0 0 100px;
+                width: 80%;
+            }
+
+            .AboutPP {
+                position: absolute;
+                right: -250px;
+                top: 0;
+                background-color: $black;
+                border-radius: 100%;
+                //box-shadow: 0px 0px 20px 2px $white;
+                //overflow: hidden;
+
+                img {
+                    height: 200px;
+                    filter: drop-shadow(3px 3px 5px $white);
+                }
+            }
+        }
+
+        .Skills {
+
+            margin: 50px 0;
+
+            h3 {
+                margin: 50px;
+                font-size: 38px;
+            }
+
+            div {
+                background-color: $white;
+                background: linear-gradient(135deg, #ECECEC, 50%, #ffb6b6);
+                display: flex;
+                justify-content: center;
+
+                width: 700px;
+
+                img {
+                    height: 500px;
+                }
+            }
+
+            .C1 {
+                margin: 0 0 0 0px;
+                border-radius: 10% 50%;
+            }
+
+            .C2 {
+                margin: 0 0 0 600px;
+                border-radius: 50% 10%;
+            }
+        }
+    }
 }
