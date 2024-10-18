@@ -63,7 +63,7 @@ const Home = () => {
                     <CardProject
                         title={'Kasa'}
                         info={'Application web de location immobilière avec React'}
-                        img={''}
+                        img={'./IMG/Kasa.png'}
                         link={'https://zeldanyan.github.io/openclassroom_projet_6/'}
                         github={'https://github.com/Zeldanyan/openclassroom_projet_6'}
                         tag={'Front-End React'} />
@@ -74,6 +74,10 @@ const Home = () => {
                         link={''}
                         github={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
                         tag={'Front-End Back-End Database API'} />
+                </section>
+                <section className='Contact'>
+                    <h3>Contact</h3>
+                    <form action=""></form>
                 </section>
             </main>
             <Footer />

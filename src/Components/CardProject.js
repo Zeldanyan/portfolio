@@ -18,7 +18,7 @@ const CardProject = (project) => {
                 <p className='info'>{project.info}</p>
             </a>
             <ul>
-                <li className='github'><a href={project.github}>Github</a></li>
+                <li className='github'><a href={project.github} target="_blank">Github</a></li>
                 {project.tag.split(' ').map((i) =>
                     <li key={i}>{i}</li>)}
             </ul>
