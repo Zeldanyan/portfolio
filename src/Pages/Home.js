@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './Home.scss';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import CardProject from '../Components/CardProject';
 import useLang from '../Components/useLang';
 
 import pp from '../Images/pp.png';
@@ -29,14 +30,50 @@ const Home = () => {
                 <section className='Skills'>
                     <h3>Compétences</h3>
                     <div className='C1'>
-                        <img src={C1} alt="" />
+                        <img src={C1} alt="Front-End Skills, git, github, scss, html, javascript, react" />
                     </div>
                     <div className='C2'>
-                        <img src={C2} alt="" />
+                        <img src={C2} alt="Back-End Skills, git, github, javascript, mongoDB, node.js, express.js" />
                     </div>
                     <div className='C1'>
-                        <img src={C3} alt="" />
+                        <img src={C3} alt="Other Skills Tools, git, github, blender, unity, Clip Studio Paint, Figma" />
                     </div>
+                </section>
+                <section className='MindSkills'>
+                    <h3>Carte de compétences</h3>
+                    <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVLU7VfVg=/?moveToViewport=-1021,-183,2101,1047&embedId=736124108246" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+                </section>
+                <section className='Career'>
+                    <h3>Experience</h3>
+                    <ul>
+                        <li><a href="https://openclassrooms.com/fr/paths/899-developpeur-web">Openclassrooms - Formation Développeuse Web (Front-End)</a></li>
+                        <li><a href="https://42.fr/">42 - Ecole de programmation (Langage C)</a></li>
+                        <li>Baccalauréat STI2D</li>
+                    </ul>
+                </section>
+                <section className='Projects'>
+                    <h3>{lang === 'en' ? 'Projects' : 'Projets'}</h3>
+                    <CardProject
+                        title={'Nina Carducci'}
+                        info={'Débuggez et optimisez un site de photographe'}
+                        img={'https://zeldanyan.github.io/openclassroom_projet_5/assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp'}
+                        link={'https://zeldanyan.github.io/openclassroom_projet_5/'}
+                        github={'https://github.com/Zeldanyan/openclassroom_projet_5'}
+                        tag={'Front-End CEO'} />
+                    <CardProject
+                        title={'Kasa'}
+                        info={'Application web de location immobilière avec React'}
+                        img={''}
+                        link={'https://zeldanyan.github.io/openclassroom_projet_6/'}
+                        github={'https://github.com/Zeldanyan/openclassroom_projet_6'}
+                        tag={'Front-End React'} />
+                    <CardProject
+                        title={'Mon vieux grimoire'}
+                        info={'Site de notation de livres'}
+                        img={''}
+                        link={''}
+                        github={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
+                        tag={'Front-End Back-End Database API'} />
                 </section>
             </main>
             <Footer />
