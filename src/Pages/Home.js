@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Home.scss';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
@@ -13,7 +14,24 @@ import C3 from '../Images/3-removebg-preview.png';
 const Home = () => {
     const [lang, upLang] = useLang();
     // useEffect(() => { upLang('en'); }, [upLang]);
-    console.log(lang);
+    //console.log(lang);
+
+    const [formData, setFormData] = useState({
+        Name: '',
+        Contact: '',
+        Text: '',
+    });
+
+    const formChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const formSubmit = (e) => {
+        e.preventDefault();
+        console.log('Formulaire soumis : ', formData);
+        emailjs.send('zelda_v', 'form_portfolio', formData, 'd5LSTrDl9TyguQNrN');
+        //alert('Formulaire soumis avec succès !');
+    };
 
     return (
         <div className='Home'>
@@ -46,8 +64,8 @@ const Home = () => {
                 <section className='Career'>
                     <h3>Experience</h3>
                     <ul>
-                        <li><a href="https://openclassrooms.com/fr/paths/899-developpeur-web">Openclassrooms - Formation Développeuse Web (Front-End)</a></li>
-                        <li><a href="https://42.fr/">42 - Ecole de programmation (Langage C)</a></li>
+                        <li><a href="https://openclassrooms.com/fr/paths/899-developpeur-web" target='_blank'>Openclassrooms - Formation Développeuse Web (Front-End)</a></li>
+                        <li><a href="https://42.fr/" target='_blank'>42 - Ecole de programmation (Langage C)</a></li>
                         <li>Baccalauréat STI2D</li>
                     </ul>
                 </section>
@@ -75,9 +93,24 @@ const Home = () => {
                         github={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
                         tag={'Front-End Back-End Database API'} />
                 </section>
-                <section className='Contact'>
+                <section className='Contact' id='a_contact'>
                     <h3>Contact</h3>
-                    <form action=""></form>
+                    <form onSubmit={formSubmit}>
+                        <div className='form formName'>
+                            <label htmlFor="Name">Nom</label>
+                            <input type="text" id='Name' name='Name' value={formData.Name} onChange={formChange} />
+                        </div>
+                        <div className='form formContact'>
+                            <label htmlFor="Contact">Email / Phone</label>
+                            <input type="text" id='Contact' name='Contact' value={formData.Contact} onChange={formChange} />
+                        </div>
+                        <div className='form formText'>
+                            <label htmlFor="Text">Message</label>
+                            <textarea name="Text" id="Text" value={formData.Text} onChange={formChange}></textarea>
+                        </div>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
                 </section>
             </main>
             <Footer />

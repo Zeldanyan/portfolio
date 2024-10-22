@@ -8,7 +8,6 @@ const Header = ({ page }) => {
     const path = location.pathname;
 
     const [lang, upLang] = useLang();
-    console.log(page);
 
     const toggleLang = () => {
         const newLang = lang === 'en' ? 'fr' : 'en';
@@ -24,7 +23,7 @@ const Header = ({ page }) => {
                     <li className={path === "/" ? 'NavActive' : ''}><Link to="/">{lang === 'en' ? 'HOME' : 'ACCUEIL'}</Link></li>
                     <li className={path === "/Skill" ? 'NavActive' : ''}><Link to="/Skill">{lang === 'en' ? 'SKILLS' : 'COMPETENCES'}</Link></li>
                     <li className={path === "/Project" ? 'NavActive' : ''}><Link to="/Project">{lang === 'en' ? 'PROJECTS' : 'PROJETS'}</Link></li>
-                    <li className={path === "/Contact" ? 'NavActive' : ''}><Link to="/Contact">CONTACT</Link></li>
+                    <li className={path === "/Contact" ? 'NavActive' : ''}><a href='#a_contact'>CONTACT</a></li>
                     <li onClick={toggleLang} className='toggleLang'>
                         {lang === 'en' ? '/EN' : '/FR'}</li>
                 </ul>

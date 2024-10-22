@@ -13,6 +13,7 @@
             font-size: 38px;
             border-bottom: solid 2px $white;
             border-radius: 5%;
+            align-self: normal;
         }
 
         .About {
@@ -127,14 +128,74 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            h3 {
-                align-self: normal;
-            }
         }
 
         .Contact {
-            height: 500px; //
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 500px;
+                margin: 10px 0 20px 0;
+
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    label {
+                        font-weight: 600;
+                        align-self: normal;
+                        margin: 15px 0 1px 15px;
+                        font-size: 24px;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        font-size: 20px;
+                        padding: 10px 15px;
+                        border: solid 1px $white;
+                        box-shadow: 2px 2px 8px $white;
+                        background-color: $white;
+                    }
+
+                    input {
+                        border-radius: 100px;
+                    }
+
+                    textarea {
+                        height: 250px;
+                        font-size: 18px;
+                        border-radius: 30px;
+                    }
+                }
+
+                button {
+                    margin-top: 20px;
+                    width: 50%;
+                    font-size: 24px;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    padding: 5px;
+                    border: solid 1px $white;
+                    box-shadow: 2px 2px 8px $white;
+                    transition: transform 0.5s ease;
+                    background-color: $black;
+                    color: $white;
+                }
+
+                button:hover {
+                    transform: scale(1.05);
+                    background-color: $white;
+                    color: $black;
+                }
+            }
         }
     }
 }

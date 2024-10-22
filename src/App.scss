@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     // background-color: black;
     // color: white;
@@ -12,4 +16,14 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+input,
+textarea,
+button {
+    font-family: none;
+}
+
+button {
+    cursor: pointer;
 }
