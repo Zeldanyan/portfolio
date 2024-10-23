@@ -3,7 +3,7 @@ import React from 'react';
 import './App.scss';
 import Home from './Pages/Home';
 import Error404 from './Pages/Error404';
-import Contact from './Pages/Contact';
+//import Contact from './Pages/Contact';
 
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Contact' element={<Contact />} />
+        <Route path='/portfolio/' element={<Home />} />
+        {/*<Route path='/Contact' element={<Contact />} />*/}
         <Route path='*' element={<Error404 />} />
       </Routes>
     </Router>
