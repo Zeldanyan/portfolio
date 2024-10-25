@@ -5,6 +5,7 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import CardProject from '../Components/CardProject';
 import useLang from '../Components/useLang';
+import { IMG_PATH } from '../config';
 
 import pp from '../Images/pp.png';
 
@@ -42,16 +43,16 @@ const Home = () => {
                         <img src={pp} alt="" />
                     </div>
                 </section>
-                <section className='Skills'>
+                <section className='Skills' id='skill'>
                     <h3>Compétences</h3>
                     <div className='C1'>
-                        <img src="./IMG/C1.png" alt="Front-End Skills, git, github, scss, html, javascript, react" />
+                        <img src={IMG_PATH + "/IMG/C1.png"} alt="Front-End Skills, git, github, scss, html, javascript, react" />
                     </div>
                     <div className='C2'>
-                        <img src="./IMG/C2.png" alt="Back-End Skills, git, github, javascript, mongoDB, node.js, express.js" />
+                        <img src={IMG_PATH + "/IMG/C2.png"} alt="Back-End Skills, git, github, javascript, mongoDB, node.js, express.js" />
                     </div>
                     <div className='C1'>
-                        <img src="./IMG/C3.png" alt="Other Skills Tools, git, github, blender, unity, Clip Studio Paint, Figma" />
+                        <img src={IMG_PATH + "/IMG/C3.png"} alt="Other Skills Tools, git, github, blender, unity, Clip Studio Paint, Figma" />
                     </div>
                 </section>
                 <section className='MindSkills'>
@@ -66,12 +67,12 @@ const Home = () => {
                         <li>Baccalauréat STI2D</li>
                     </ul>
                 </section>
-                <section className='Projects'>
+                <section className='Projects' id='project'>
                     <h3>{lang === 'en' ? 'Projects' : 'Projets'}</h3>
                     <CardProject //OC - P2
                         title={'Booki'}
                         info={"Page d'accueil d'une agence de voyage avec HTML & CSS"}
-                        img={'./IMG/Booki.png'}
+                        img={IMG_PATH + '/IMG/Booki.png'}
                         link={'https://zeldanyan.github.io/openclassroom_projet_2/'}
                         github={'https://github.com/Zeldanyan/openclassroom_projet_2'}
                         tag={'Front-End'} />
@@ -85,7 +86,7 @@ const Home = () => {
                     <CardProject //OC - P6
                         title={'Kasa'}
                         info={'Application web de location immobilière avec React'}
-                        img={'./IMG/Kasa.png'}
+                        img={IMG_PATH + '/IMG/Kasa.png'}
                         link={'https://zeldanyan.github.io/openclassroom_projet_6/'}
                         github={'https://github.com/Zeldanyan/openclassroom_projet_6'}
                         tag={'Front-End React'} />
@@ -97,7 +98,7 @@ const Home = () => {
                         github={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
                         tag={'Front-End Back-End Database API'} />
                 </section>
-                <section className='Contact' id='a_contact'>
+                <section className='Contact' id='contact'>
                     <h3>Contact</h3>
                     <form onSubmit={formSubmit}>
                         <div className='form formName'>

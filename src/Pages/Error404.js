@@ -13,7 +13,7 @@ const Error404 = () => {
             <main>
                 <h1>{lang === 'en' ? 'Error 404' : 'Erreur 404'}</h1>
                 <Link to="/" className='portalHome'>
-                    <img src='./IMG/portal.png' alt="portal to the home" />
+                    <img src='/IMG/portal.png' alt="portal to the home" />
                     <p className='p1'>Portal</p><p className='p2'>{lang === 'en' ? 'to the home' : `vers l'accueil`}</p>
                 </Link>
 
