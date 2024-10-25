@@ -38,13 +38,14 @@ const Home = () => {
                 <section className='About'>
                     <h1>Portfolio - Zelda Vigneron</h1>
                     <h2>{lang === 'en' ? 'Front-End Developer' : 'Développeuse Front-End'}</h2>
-                    <p>Je suis une passionée de technologie et de design depuis mon enfance.</p>
+                    <p>{lang === 'en' ? 'I am passionate about technology and design.'
+                        : 'Je suis une passionée de technologie et de design depuis mon enfance.'}</p>
                     <div className='AboutPP'>
                         <img src={pp} alt="" />
                     </div>
                 </section>
                 <section className='Skills' id='skill'>
-                    <h3>Compétences</h3>
+                    <h3>{lang === 'en' ? 'Skills' : 'Compétences'}</h3>
                     <div className='C1'>
                         <img src={IMG_PATH + "/IMG/C1.png"} alt="Front-End Skills, git, github, scss, html, javascript, react" />
                     </div>
@@ -56,11 +57,11 @@ const Home = () => {
                     </div>
                 </section>
                 <section className='MindSkills'>
-                    <h3>Carte de compétences</h3>
+                    <h3>{lang === 'en' ? 'Mindmap Skills' : 'Carte de compétences'}</h3>
                     <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVLU7VfVg=/?moveToViewport=-1021,-183,2101,1047&embedId=736124108246" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
                 </section>
                 <section className='Career'>
-                    <h3>Experience</h3>
+                    <h3>{lang === 'en' ? 'Career' : 'Etudes'}</h3>
                     <ul>
                         <li><a href="https://openclassrooms.com/fr/paths/899-developpeur-web" target='_blank'>Openclassrooms - Formation Développeuse Web (Front-End)</a></li>
                         <li><a href="https://42.fr/" target='_blank'>42 - Ecole de programmation (Langage C)</a></li>
@@ -94,7 +95,7 @@ const Home = () => {
                         title={'Mon vieux grimoire'}
                         info={'Site de notation de livres'}
                         img={''}
-                        link={''}
+                        link={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
                         github={'https://github.com/Zeldanyan/openclassroom_projet_7_backend'}
                         tag={'Front-End Back-End Database API'} />
                 </section>
@@ -102,7 +103,7 @@ const Home = () => {
                     <h3>Contact</h3>
                     <form onSubmit={formSubmit}>
                         <div className='form formName'>
-                            <label htmlFor="Name">Nom</label>
+                            <label htmlFor="Name">{lang === 'en' ? 'Name' : 'Nom'}</label>
                             <input type="text" id='Name' name='Name' value={formData.Name} onChange={formChange} />
                         </div>
                         <div className='form formContact'>
@@ -114,7 +115,7 @@ const Home = () => {
                             <textarea name="Text" id="Text" value={formData.Text} onChange={formChange}></textarea>
                         </div>
 
-                        <button type="submit">Envoyer</button>
+                        <button type="submit">{lang === 'en' ? 'Send' : 'Envoyer'}</button>
                     </form>
                 </section>
             </main>
