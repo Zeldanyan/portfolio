@@ -39,6 +39,10 @@
         .info {
             font-size: 24px;
         }
+
+        @media (max-width: 1024px) {
+            height: 50vw;
+        }
     }
 
     ul {
@@ -66,6 +70,10 @@
             transform: scale(1.05);
             background-color: $white;
             color: $black;
+        }
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
         }
     }
 
