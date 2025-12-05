@@ -1,0 +1,20 @@
+@import '../var';
+
+.Skill {
+    display: flex;
+    height: 50px;
+    background-color: $black;
+    margin: 5px 10px;
+    padding: 2px 5px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    border-color: $white;
+    border-radius: 40px;
+    font-size: 20px;
+
+    img {
+        height: 40px;
+    }
+}

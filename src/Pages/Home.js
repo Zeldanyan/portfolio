@@ -4,6 +4,7 @@ import './Home.scss';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import CardProject from '../Components/CardProject';
+import Skill from '../Components/Skill';
 import useLang from '../Components/useLang';
 import { IMG_PATH } from '../config';
 
@@ -46,15 +47,83 @@ const Home = () => {
                 </section>
                 <section className='Skills' id='skill'>
                     <h3>{lang === 'en' ? 'Skills' : 'Compétences'}</h3>
-                    <div className='C1'>
-                        <img src={IMG_PATH + "/IMG/C1.png"} alt="Front-End Skills, git, github, scss, html, javascript, react" />
+
+
+                    <div className='GridSkills'>
+                        <div className='ListSkills'>
+                            <h4>Front-End</h4>
+                            <Skill
+                                name={'HTML5'}
+                                logo={'/IMG/icon/HTML5.png'} />
+                            <Skill
+                                name={'CSS3'}
+                                logo={'/IMG/icon/CSS3.png'} />
+                            <Skill
+                                name={'JavaScript'}
+                                logo={'/IMG/icon/JS.png'} />
+                            <Skill
+                                name={'React'}
+                                logo={'/IMG/icon/React.png'} />
+                            <Skill
+                                name={'SuperCSS'}
+                                logo={'/IMG/icon/SCSS.png'} />
+                            <Skill
+                                name={'Figma'}
+                                logo={'/IMG/icon/Figma.png'} />
+                        </div>
+                        <div className='ListSkills'>
+                            <h4>Back-End</h4>
+                            <Skill
+                                name={'JavaScript'}
+                                logo={'/IMG/icon/JS.png'} />
+                            <Skill
+                                name={'Node.js'}
+                                logo={'/IMG/icon/NodeJS.png'} />
+                            <Skill
+                                name={'MongoDB'}
+                                logo={'/IMG/icon/MongoDB.png'} />
+                        </div>
+                        <div className='ListSkills'>
+                            <h4>Autres</h4>
+                            <Skill
+                                name={'Git'}
+                                logo={'/IMG/icon/Git.png'} />
+                            <Skill
+                                name={'Github'}
+                                logo={'/IMG/icon/Github.png'} />
+                            <Skill
+                                name={'Word'}
+                                logo={'/IMG/icon/Word.png'} />
+                            <Skill
+                                name={'Excel'}
+                                logo={'/IMG/icon/Excel.png'} />
+                            <Skill
+                                name={'PowerPoint'}
+                                logo={'/IMG/icon/PowerPoint.png'} />
+                            <Skill
+                                name={'Premiere pro'}
+                                logo={'/IMG/icon/Pr.png'} />
+                            <Skill
+                                name={'Photoshop'}
+                                logo={'/IMG/icon/Ps.png'} />
+                            <Skill
+                                name={'C'}
+                                logo={'/IMG/icon/C.png'} />
+                            <Skill
+                                name={'Lua'}
+                                logo={'/IMG/icon/Lua.png'} />
+                            <Skill
+                                name={'Unity'}
+                                logo={'/IMG/icon/Unity.png'} />
+                            <Skill
+                                name={'Blender'}
+                                logo={'/IMG/icon/Blender.png'} />
+                            <Skill
+                                name={'Clip Studio Paint'}
+                                logo={'/IMG/icon/ClipStudioPaint.png'} />
+                        </div>
                     </div>
-                    <div className='C2'>
-                        <img src={IMG_PATH + "/IMG/C2.png"} alt="Back-End Skills, git, github, javascript, mongoDB, node.js, express.js" />
-                    </div>
-                    <div className='C1'>
-                        <img src={IMG_PATH + "/IMG/C3.png"} alt="Other Skills Tools, git, github, blender, unity, Clip Studio Paint, Figma" />
-                    </div>
+
                 </section>
                 <section className='MindSkills'>
                     <h3>{lang === 'en' ? 'Mindmap Skills' : 'Carte de compétences'}</h3>
